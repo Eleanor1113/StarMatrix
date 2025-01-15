@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://kit.fontawesome.com/32462e5694.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="{{url_for('static', filename='chicken2.png')}}" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Goal</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Taiwan</p>
+                <h1>Hi, I'm <span>Eleanor</span><br>Agent</h1>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="{{url_for('static', filename='ME.jpg')}}">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>"With a deep passion and expertise in astrology, I am eager to contribute to the innovative work of Tang Teacher, bringing my unique insights and skills to support and enhance the team's efforts."</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Information Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Managerial Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education/Certification</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Design web</span><br>HTML CSS JS C#</li>
+                            <li><span>Big Data</span><br>R</li>
+                            <li><span>Others</span><br>Python Java SPSS App</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Business</span><br>Accounting Statistics Economics</li>
+                            <li><span>Marketing</span><br>EC Management Science</li>
+                            <li><span>Information Security</span><br>Block Chain</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>長庚大學</span><br>Information Management</li>
+                            <li><span>R</span><br>Big Data Knowledge Today</li>
+                            <li><span>R</span><br>R language Today</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>創新</h2>
+                    <p>占星社交平台</p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>橋梁</h2>
+                    <p>占星知識與工程師的橋樑</p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>數據視覺化</h2>
+                    <p>將複雜的星盤轉化為更易於理解和操作的圖表和報告，提升用戶的理解和互動性。</p>
+                    <a href="#">learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My goal</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="{{url_for('static', filename='pro-1.png')}}">
+                    <div class="layer">
+                        <h3>星盤</h3>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="{{url_for('static', filename='pro-2.jpg')}}">
+                    <div class="layer">
+                        <h3>人類圖</h3>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="{{url_for('static', filename='pro-3.jpg')}}">
+                    <div class="layer">
+                        <h3>MBTI</h3>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane" style="color: #113c2f;"></i>eleanor@gmail.com</p>
+                    <p> <i class="fa-sharp fa-solid fa-phone" style="color: #113c2e;"></i>0905-619-943</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/"><i class="fa-brands fa-square-instagram" style="color: #053325;"></i></a>
+                        <a href="https://facebook.com/"><i class="fa-brands fa-facebook" style="color: #06281e;"></i></a>
+                    </div>
+                    <a href="{{ url_for('static', filename='my-cv.pdf') }}" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p><i class="fa-solid fa-star"></i>I am very interested in this position and I am very confident that I can be successful in it.</p>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
